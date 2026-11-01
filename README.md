@@ -20,3 +20,7 @@ Reservas se verificó por etapas después de corregir expresiones. Se observaron
 
 ## Comparación de costos
 Dos resultados de procesamiento por lotes consumieron 1.015 tokens de entrada y 388 de salida en total. Aplicando las tarifas usadas en el ensayo a ese mismo volumen, el equivalente estándar fue USD 0,00029550 y la estimación por lotes USD 0,00014775. El ahorro estimado del 50 % corresponde a la generación por lotes. La validación, el control de versión y el registro se resuelven sin llamadas al modelo.
+
+## Material de la entrega
+
+[Base académica de solo lectura](https://airtable.com/app8A1ygrQCe836xD/shr75iddMYO4gTWif) · [Video de tres minutos](demo.mp4) · [Diagrama de arquitectura](Arquitectura.pdf) · [Capturas](capturas)

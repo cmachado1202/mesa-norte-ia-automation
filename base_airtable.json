@@ -1,0 +1,61 @@
+{
+  "nombre": "Mesa Norte - Laboratorio Coderhouse",
+  "estado": "Esquema de referencia de la base académica creada con Omni AI",
+  "tablas": [
+    {
+      "nombre": "Conocimiento",
+      "campos": {
+        "Nombre": "singleLineText (primario)",
+        "Texto": "multilineText",
+        "Validado": "checkbox",
+        "Fuente": "url"
+      }
+    },
+    {
+      "nombre": "Ideas",
+      "campos": {
+        "Nombre": "singleLineText (primario)",
+        "Tema": "multilineText",
+        "Estado": "singleSelect: Pendiente, Generando, Esperando aprobacion, Enviando, Enviado, Rechazado, Error",
+        "Revision": "number entero",
+        "Conocimiento": "multipleRecordLinks -> Conocimiento",
+        "EjecucionActiva": "singleLineText",
+        "RevisionBorrador": "number entero",
+        "Titulo": "singleLineText",
+        "Borrador": "multilineText",
+        "Citas": "multilineText",
+        "AprobadaRevision": "number entero",
+        "AprobadaEn": "dateTime ISO",
+        "EnviadaEn": "dateTime ISO",
+        "GmailMessageId": "singleLineText",
+        "GmailThreadId": "singleLineText",
+        "InputTokens": "number entero",
+        "OutputTokens": "number entero"
+      }
+    },
+    {
+      "nombre": "Ejecuciones",
+      "campos": {
+        "ExecutionId": "singleLineText (primario)",
+        "Idea": "multipleRecordLinks -> Ideas",
+        "Estado": "singleSelect: Iniciada, Esperando aprobacion, Correcta, Rechazada, Error",
+        "Inicio": "dateTime ISO",
+        "Fin": "dateTime ISO",
+        "Modelo": "singleLineText",
+        "InputTokens": "number entero",
+        "OutputTokens": "number entero",
+        "Detalle": "multilineText",
+        "TasaExito": "formula: cerradas Correcta/Error/Rechazada => 1 si Correcta, 0 si otra; vacio si pendiente. Porcentaje.",
+        "TasaError": "formula: cerradas Correcta/Error/Rechazada => 1 si Error, 0 si otra; vacio si pendiente. Porcentaje."
+      }
+    }
+  ],
+  "vistas": [
+    "Ideas por estado",
+    "Esperando aprobacion",
+    "Enviando - reconciliar antes de repetir",
+    "Ejecuciones con error",
+    "Consumo observado"
+  ],
+  "seguridad": "Solo datos ficticios. Compartir una interfaz de lectura de esta base; no compartir todo el workspace."
+}
